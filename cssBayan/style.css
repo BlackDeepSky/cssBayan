@@ -1,42 +1,103 @@
-body{
-    margin: 0 auto;
-    text-align: center;
-    width: 70%;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
 }
-.main-title{
-    text-align: left;
-    font-size: 34px;
+html, body {
+	background-color: #ffe4c4;
 }
-.mem-block{
-    
+
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
-.accordion{
-    cursor: pointer;
+
+li {
+	list-style-type: none;
 }
-.mem-block_title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+input {
+	display: none;
 }
-.accordion-open{
-    background-image: url('img/close.png');
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    transition: all 0.5s ease-in;
+
+input + label {
+	cursor: pointer;
 }
-.accordion-open:hover{
-    background-image: url('img/open.png');
-    width: 30px;
-    height: 30px;
-    background-repeat: no-repeat;
-    transition: all 0.2s ease-in;
+
+input:checked + label {
+	color: #000;
 }
-input[type="radio"]{
-    opacity: 0;
-    height: 0;
-    visibility: hidden;
+
+.container {
+	max-width: 70%;
+	margin: 5rem auto;
 }
-.mem-block_img img{
-    width: 450px;
+
+.css-bayan {
+	padding: 1rem 0;
+	cursor: pointer;
+}
+
+.memes-list__item {
+	font-size: 1.7rem;
+	font-weight: bold;
+	color: #6380e0;
+	border-top: 2px solid #ad9c86;
+}
+
+.memes-list__item input:checked ~ .fa-plus{
+	transform: rotate(135deg);
+}
+
+.meme-item__title {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: .5rem 0;
+	transition: color .5s ease-in-out;
+}
+
+.meme-item__title p {
+	flex-basis: 95%;
+}
+
+.meme-item__img {
+	max-width: 50%;
+	height: 0;
+	transform: scale(0);
+	overflow: hidden;
+	margin: .2rem auto;
+	transition: height .5s linear, transform .5s linear;
+}
+.css-bayan__list:hover .memes-list__item {
+	color: #000;
+}
+
+.fa-plus {
+	opacity: 0;
+	transition: transform 1s linear, opacity .5s linear;
+	color: #000;
+}
+
+.css-bayan:hover .fa-plus {
+	opacity: 1;
+	transition: transform .5s linear, opasity .4s linear;
+}
+
+.css-bayan .memes-list input:checked + label .meme-item__img {
+	height: 25rem;
+	transform: scale(1);
+	transition: height .5s linear, transform .5s linear;
+}
+
+.memes-list__item:hover .fa-plus {
+	transform: rotate(135deg);
+}
+
+.memes-list__item:hover .meme-item__img {
+	height: 25rem;
+	transform: scale(1);
+	transition: height .5s linear, transform .5s linear;
 }
