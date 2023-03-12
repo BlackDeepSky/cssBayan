@@ -1,0 +1,9 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+.main-title{
+    text-align: left;
+    font-size: 34px;
+}
