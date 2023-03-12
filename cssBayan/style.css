@@ -7,3 +7,36 @@ body{
     text-align: left;
     font-size: 34px;
 }
+.mem-block{
+    
+}
+.accordion{
+    cursor: pointer;
+}
+.mem-block_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.accordion-open{
+    background-image: url('img/close.png');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease-in;
+}
+.accordion-open:hover{
+    background-image: url('img/open.png');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in;
+}
+input[type="radio"]{
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+}
+.mem-block_img img{
+    width: 450px;
+}
